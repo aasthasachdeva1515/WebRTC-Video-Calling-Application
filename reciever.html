@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC</title>
+    <link rel="icon" href="../favico.ico" type="image/icon type">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="logo"onclick="indexpage()">WebRTC Call</div>
+    <a href="https://github.com/sherwindavis/WebRTC-Call" target="_blank"><img src="../resources/github-11-48.png" alt="" id="git"  ></img></a>
+    <div id="login">
+        <div id = "signin">Signin</div>
+        <input placeholder="Enter ID" type="text" id="username-input"/><br>
+        <button onclick="joinCall()"class="btn-grad2">Join Call</button>
+        <button onclick="homepage()"class="btn-light">Starting a call?</button>
+    </div>
+    <div id="video-call-div">
+        <video muted id="local-video" autoplay></video>
+        <video id="remote-video" autoplay></video>
+        <div id="chatbar">
+        <ul id="chatlog">
+        </ul>
+        <textarea id="textdata"  name="Text1" cols="40" rows="5" maxlength="200"></textarea>
+        <button id="send"onclick="sendtext()">SEND</button>
+        </div>
+        <div class="call-action-div" id="callactiondiv">
+            <img src="../resources/screen_share_white_48dp.svg" onclick="screenshare()" id="screenshare" alt="screenshare"></img>
+            <img src="../resources/mute.svg" onclick="muteaudio()"id="muteaudio" alt="Mute Audio"></img>
+            <img src="../resources/cam.svg" onclick="mutevideo()" id="cam" alt="Mute Video"></img>
+            <img src="../resources/hangup.svg" onclick="hangup()" id="hangup" alt="Hang Up"></img>
+            <img src="../resources/chat_white_24dp.svg" onclick="chat()" id="chat" alt="Chat"></img>
+        </div>
+        
+    </div>
+
+    <script src ="./reciever.js"></script>
+
+</body>
+</html>
